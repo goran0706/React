@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Modal from "./Modal";
 
 const NoPortalExample = () => {
@@ -11,7 +11,7 @@ const NoPortalExample = () => {
     <>
       {showModal ? (
         <Modal onClose={onClose}>
-          <p>I'm a modal dialog</p>
+          <p>Im a modal dialog</p>
         </Modal>
       ) : (
         <button onClick={onOpen}>Show Modal</button>

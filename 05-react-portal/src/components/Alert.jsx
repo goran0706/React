@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
 const Alert = ({ children, timeMS = 10000, status = "info" }) => {
@@ -18,7 +18,7 @@ const Alert = ({ children, timeMS = 10000, status = "info" }) => {
       alertRoot.removeChild(elRef.current);
       clearTimeout(id);
     };
-  }, []);
+  }, [timeMS]);
 
   return createPortal(
     <div className={`alert ${status}`}>{children}</div>,

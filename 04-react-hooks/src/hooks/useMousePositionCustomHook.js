@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
 
 const useMousePosition = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -11,10 +11,10 @@ const useMousePosition = () => {
       });
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener("mousemove", handleMouseMove);
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 function useLocalStorageState(
   key,
-  defaultValue = '',
+  defaultValue = "",
   { serialize = JSON.stringify, deserialize = JSON.parse } = {}
 ) {
   const [state, setState] = React.useState(() => {
@@ -16,7 +16,7 @@ function useLocalStorageState(
         window.localStorage.removeItem(key);
       }
     }
-    return typeof defaultValue === 'function' ? defaultValue() : defaultValue;
+    return typeof defaultValue === "function" ? defaultValue() : defaultValue;
   });
 
   const prevKeyRef = React.useRef(key);
